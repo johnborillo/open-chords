@@ -1,0 +1,208 @@
+{
+  "evidence_id": "ev_fb25cfbc6a3e3e13b2718d55ead9975aaa194eac12f02327b00f84bb812d442e",
+  "subject": {
+    "name": "alphatab",
+    "digest": {
+      "sha256": "7ae8a12635f4736bc019d9a7e4a65ae4f970d0387e92b17b893ca42130a9daf9"
+    },
+    "format": "directory",
+    "architecture": null,
+    "local_path": "/data-storage/projects/open-chords/node_modules/@coderline/alphatab"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_0485caab338dcb06346c515e41fbd3a13391db152246c0b1bc8546f8605e0ea7",
+    "view": {
+      "kind": "item",
+      "collection": "modules",
+      "selector": {
+        "node_id": "jag_node_dc739a892bf1403e718407ec044c8d90e85f5b5393d8cd52871532a6197c9596"
+      }
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "item",
+    "view": {
+      "kind": "item",
+      "collection": "modules",
+      "selector": {
+        "node_id": "jag_node_dc739a892bf1403e718407ec044c8d90e85f5b5393d8cd52871532a6197c9596"
+      }
+    },
+    "item": {
+      "node_id": "jag_node_dc739a892bf1403e718407ec044c8d90e85f5b5393d8cd52871532a6197c9596",
+      "kind": "javascript-asset",
+      "path": "dist/alphaTab.core.mjs",
+      "identity": {
+        "strategy": "content-digest",
+        "stability": "global-exact",
+        "sha256": "e78a5d2d7eaa56106a61bcfd91ac725e8f4b6f078726bc83e71189a5ca0224d8"
+      },
+      "hashes": [
+        "e78a5d2d7eaa56106a61bcfd91ac725e8f4b6f078726bc83e71189a5ca0224d8"
+      ],
+      "exports": [],
+      "source_ranges": [],
+      "observations": [
+        {
+          "observation_id": "jag_observation_b830e37db5657ddc5496c7df5c8d9f0975c19387a7639dcaaf54f8df48fb9e59",
+          "label": "dist/alphaTab.core.mjs",
+          "properties": {
+            "path": "dist/alphaTab.core.mjs",
+            "bytes": 3173567,
+            "inventory_artifact_id": "art_654b0486b268b2fb63c62a0c72aa47fe3aa753f449bf192806c3e4a74d64c05a",
+            "unpacked": false,
+            "file_kind": "javascript",
+            "text_status": "included",
+            "parse_status": "complete",
+            "json_parse_status": null,
+            "json_top_level_keys": [],
+            "omitted_json_top_level_keys": 0,
+            "vendor_markers": [
+              "webpack"
+            ]
+          },
+          "evidence": {
+            "authority": "artifact-bytes",
+            "state": "observed",
+            "confidence": "exact",
+            "artifact": {
+              "available": true,
+              "artifact_id": "art_e78a5d2d7eaa56106a61bcfd91ac725e8f4b6f078726bc83e71189a5ca0224d8",
+              "sha256": "e78a5d2d7eaa56106a61bcfd91ac725e8f4b6f078726bc83e71189a5ca0224d8"
+            },
+            "location": {
+              "available": true,
+              "value": {
+                "kind": "artifact-path",
+                "path": "dist/alphaTab.core.mjs"
+              }
+            },
+            "extractor": {
+              "name": "rea-javascript-artifact-reconstruction",
+              "version": "1",
+              "operation": "inventory-relevant-file",
+              "executable_sha256": null
+            },
+            "coverage": {
+              "status": "complete",
+              "truncated": false,
+              "omitted_count": 0,
+              "limits": []
+            },
+            "limitations": [],
+            "evidence_ids": []
+          }
+        }
+      ]
+    },
+    "parent_evidence_id": "ev_0485caab338dcb06346c515e41fbd3a13391db152246c0b1bc8546f8605e0ea7",
+    "parent_operation": "analyze_javascript_application",
+    "parent_digest": "0485caab338dcb06346c515e41fbd3a13391db152246c0b1bc8546f8605e0ea7",
+    "view_digest": "2f1dc0557937bd207ca9ac780fb6d73cc127707bb0027a766e3cb7fb228722ad",
+    "artifact": {
+      "path": "/data-storage/projects/open-chords/node_modules/@coderline/alphatab",
+      "sha256": "7ae8a12635f4736bc019d9a7e4a65ae4f970d0387e92b17b893ca42130a9daf9"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 1,
+      "total": 328,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+      "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+      "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+      "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+      "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+      "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+      "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+      "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+      "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.",
+      "dist/alphaTab.core.min.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.min.mjs during semantic",
+      "dist/alphaTab.core.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.mjs during semantic",
+      "dist/alphaTab.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.js during semantic",
+      "dist/alphaTab.min.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.min.js during semantic"
+    ],
+    "unknowns": [
+      "4 application graph unknowns remain in the parent Evidence.",
+      "405 semantic graph unknowns remain in the parent Evidence.",
+      "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+      "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+      "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+      "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+      "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+      "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+      "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+      "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+      "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.",
+      "dist/alphaTab.core.min.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.min.mjs during semantic",
+      "dist/alphaTab.core.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.mjs during semantic",
+      "dist/alphaTab.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.js during semantic",
+      "dist/alphaTab.min.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.min.js during semantic",
+      "graph.coverage.status is partial",
+      "semantic_graph.coverage.status is partial"
+    ]
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+    "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+    "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+    "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+    "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+    "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+    "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+    "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.",
+    "dist/alphaTab.core.min.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.min.mjs during semantic",
+    "dist/alphaTab.core.mjs: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.core.mjs during semantic",
+    "dist/alphaTab.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.js during semantic",
+    "dist/alphaTab.min.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing dist/alphaTab.min.js during semantic"
+  ],
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/data-storage/projects/open-chords/node_modules/@coderline/alphatab"
+    }
+  ],
+  "evidence_links": [
+    "ev_0485caab338dcb06346c515e41fbd3a13391db152246c0b1bc8546f8605e0ea7"
+  ]
+}

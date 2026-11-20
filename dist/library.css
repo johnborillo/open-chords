@@ -1,0 +1,113 @@
+/* Song collections and controls share the active theme's colors. */
+[hidden]{display:none!important}
+.sidebar .brand{margin-bottom:25px}
+.sidebar>.primary{margin-bottom:25px}
+.library-navigation{margin:0 0 17px;min-width:0}
+.library-navigation>label{display:block;font-size:10px;color:var(--muted);margin-bottom:6px}
+.library-view-row{display:flex;align-items:center;gap:7px;min-width:0}
+#library-view{display:block;flex:1;min-width:0;width:100%;height:36px;border:1px solid var(--border);border-radius:6px;padding:0 8px;background:var(--inset);color:var(--text);font-size:11px;text-overflow:ellipsis}
+#library-view option,#library-view optgroup{background:var(--inset);color:var(--text)}
+#new-setlist{border:1px solid var(--border);width:36px;height:36px;color:var(--green)}
+#manage-setlist{margin-top:6px;font-size:10px}
+#song-list{min-height:50px;flex:1}
+.song-link{min-width:0}
+.song-link>span:not(.favorite-marker){min-width:0;flex:1}
+.song-link strong{max-width:100%}
+.favorite-marker{color:var(--green);margin-left:auto;flex-shrink:0}
+.favorite-marker .icon{width:12px;height:12px;fill:currentColor;stroke-width:1}
+.sidebar-bottom{padding-top:22px}
+.song-organize{width:38px;height:38px;flex-shrink:0;border:1px solid var(--button-border);color:var(--lyric);border-radius:7px}
+.song-organize[aria-pressed=true]{color:var(--chord-color);background:var(--green-dark)}
+.song-organize[aria-pressed=true] .icon{fill:currentColor}
+.setlist-player{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 17px;margin-bottom:25px;background:var(--card);border:1px solid var(--border);border-radius:9px}
+.setlist-playing{display:flex;align-items:center;gap:12px;min-width:0;flex-wrap:wrap}
+.setlist-playing strong{font-size:12px;font-weight:500;overflow-wrap:anywhere}
+#setlist-position{font-size:10px;color:var(--muted)}
+.setlist-player-actions{display:flex;gap:8px;flex-shrink:0}
+.setlist-player .secondary{min-height:34px;font-size:11px;padding:8px 11px}
+
+/* A sheet chord remains part of the monospace line when it becomes a button. */
+.chord-tap{position:relative;display:inline-block;vertical-align:baseline;border:0;margin:0;font-family:inherit;line-height:inherit;letter-spacing:inherit;white-space:pre;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 30%,transparent);text-underline-offset:3px;text-decoration-thickness:1px}
+.sheet-segment .chord-tap{justify-self:start;align-self:start}
+.sheet-chords .chord-tap{line-height:1.2}
+.chord-tap:after{content:'';position:absolute;inset:-3px}
+.chord-tap:hover{background:var(--hover);text-decoration-color:currentColor}
+.chord-tap:focus-visible{outline-offset:2px}
+#chord-diagram-large>.field-hint{padding:20px 14px;font-family:var(--sans);text-align:center;color:var(--muted)}
+
+/* Setlist editor */
+#setlist-dialog{max-width:650px}
+#setlist-dialog .input-label{margin-top:22px}
+.setlist-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 10px}
+.setlist-section-heading h3{font-size:12px;font-weight:500;margin:0}
+.setlist-section-heading>span{font-size:10px;color:var(--muted)}
+.setlist-song-list{list-style:none;padding:0;margin:0;max-height:250px;overflow:auto;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.setlist-song-list>.field-hint{padding:10px 0;margin:0}
+.setlist-song-row,.available-song-row{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid var(--border)}
+.setlist-song-row:last-child,.available-song-row:last-child{border-bottom:0}
+.setlist-song-number{font-size:10px;min-width:16px;text-align:center;color:var(--dim);font-variant-numeric:tabular-nums}
+.setlist-song-copy{min-width:0;flex:1}
+.setlist-song-copy strong{display:block;overflow-wrap:anywhere;font-size:12px;font-weight:500}
+.setlist-song-copy small{display:block;font-size:10px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+.setlist-order-actions{display:flex;gap:3px;flex-shrink:0}
+.setlist-order-actions .icon-button{width:32px;height:34px;font-size:17px}
+.setlist-order-actions .icon{width:13px;height:13px}
+.setlist-search{display:flex;margin:0 0 5px}
+.setlist-available{max-height:220px;overflow:auto}
+.available-song-row .secondary{min-height:32px;padding:7px 12px;font-size:11px}
+.setlist-save-actions{display:flex;gap:9px;margin-left:auto}
+.setlist-membership{display:flex;align-items:center;gap:13px;border:1px solid var(--border);border-radius:7px;padding:13px;margin:10px 0;cursor:pointer}
+.setlist-membership input{accent-color:var(--green);width:17px;height:17px;flex-shrink:0;margin:0}
+.text-button.danger{color:var(--error-text)}
+:root.light .text-button.danger{color:var(--error-text)}
+
+@media(max-width:1200px){.song-actions{gap:7px}.song-organize{width:34px;height:36px}}
+@media(max-width:1000px){
+ .control-bar .font-control{display:flex;margin-left:0}
+ .font-control button{min-width:30px;min-height:34px}
+ .font-control>div{gap:5px}
+ .song-actions{flex-direction:row;flex-wrap:wrap;justify-content:flex-end;max-width:230px}
+}
+@media(max-width:700px){
+ .sidebar .brand{margin:0}
+ .sidebar>.primary{margin:0}
+ .sidebar .search{display:flex;grid-column:1/-1;margin:0;min-width:0;padding:8px 11px}
+ .sidebar .search input{font-size:16px;line-height:1.3}
+ .search-key{display:none}
+ .library-navigation{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin:0;min-width:0}
+ .library-navigation>label{display:none}
+ .library-view-row{min-width:0;flex:1}
+ #library-view{height:38px;font-size:16px}
+ #new-setlist{width:38px;height:38px}
+ #manage-setlist{margin:0;font-size:10px;white-space:nowrap;flex-shrink:0}
+ #song-list{min-height:0;max-height:160px;gap:8px}
+ .song-link{flex-shrink:0;min-width:140px;max-width:240px}
+ .song-link>span:not(.favorite-marker){flex:initial}
+ .song-link .favorite-marker .icon{width:10px}
+ .song-heading{flex-wrap:wrap;gap:17px}
+ .song-heading>div:first-child{min-width:0;width:100%}
+ .song-heading h1{overflow-wrap:anywhere}
+ .song-actions{width:100%;max-width:none;justify-content:flex-start;flex-wrap:nowrap;gap:8px}
+ .song-organize{width:36px;height:36px}
+ .song-actions .secondary{padding:9px 10px}
+ .control-bar .font-control{display:flex;border-right:0;margin-left:0}
+ .control-bar .font-control label{font-size:10px}
+ .setlist-player{flex-direction:column;align-items:stretch;padding:13px;margin-bottom:20px;gap:12px}
+ .setlist-playing{gap:7px 10px}
+ .setlist-playing .eyebrow{flex-basis:100%}
+ .setlist-player-actions{justify-content:space-between}
+ .setlist-player-actions .secondary{flex:1;min-height:38px}
+ #setlist-dialog .url-input,.setlist-search input{font-size:16px}
+ .setlist-song-row{gap:7px}
+ .setlist-order-actions{gap:0}
+ .setlist-order-actions .icon-button{width:29px;min-width:29px;min-height:36px;padding:4px}
+ .setlist-song-number{min-width:12px}
+ #setlist-dialog .dialog-footer{flex-wrap:wrap;gap:17px}
+ .setlist-song-list{max-height:220px}
+ .setlist-available{max-height:180px}
+}
+@media print{
+ .library-navigation,.setlist-player,.song-organize{display:none!important}
+ .chord-tap{color:#111;background:none;text-decoration:none;box-shadow:none;padding:0;cursor:default}
+ .chord-tap:after{display:none}
+}

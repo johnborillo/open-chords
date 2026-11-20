@@ -1,0 +1,25 @@
+{
+  "name": "open-chords",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node tests/music.test.mjs && node tests/link-import.test.mjs && node tests/voicings.test.mjs && node tests/appearance.test.mjs && node tests/collections.test.mjs",
+    "build:vercel": "node scripts/build.mjs --vercel",
+    "check:vercel": "npm run build:vercel && node scripts/validate-vercel.mjs"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "1.8.1",
+    "@tombatossals/chords-db": "0.5.1",
+    "@tonaljs/chord": "6.2.1",
+    "@tonaljs/note": "4.12.3",
+    "parse5": "8.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "esbuild": "0.25.12",
+    "jsdom": "27.2.0"
+  }
+}
